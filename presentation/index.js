@@ -2,19 +2,10 @@
 import React from "react";
 
 // Import Spectacle Core tags
-import { Deck, Heading, Image, List, ListItem, Slide, Text } from "spectacle";
+import { Deck, Heading, Slide, Text } from "spectacle";
 
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
-
-const images = {
-  old: require("../assets/vanha.png"),
-  goodWork: require("../assets/good-work.gif"),
-  team: require("../assets/tiimi.jpg"),
-  newVersion: require("../assets/saatana.png"),
-  bug: require("../assets/viat.png"),
-  mobile: require("../assets/sami-mobiili.jpg")
-};
 
 // Require CSS
 require("normalize.css");
@@ -50,53 +41,75 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="secondary" textColor="tertiary">
           <Heading size={2} textColor="primary" caps>
-            OA 2019 Tavoitteet
+            Ongelma
           </Heading>
           <Text margin="50px 0 0" textColor="tertiary" bold>
-            Henkilöt ja Projektit osiot valmiina Beta-testaukseen.
+            Projektin budjetin seuranta tehdään manuaalisesti eikä Google sheet
+            ole siihen paras - melkoinen häkkyrä ylläpitää
           </Text>
           <Text margin="50px 0 0" textColor="tertiary" bold>
-            Budjettiosio odottelee vielä herrojen tarkempaa speksausta.
-          </Text>
-          <Text margin="50px 0 0" textColor="tertiary" bold>
-            GitHub-projektien issues osioon on kerätty kehitettäviä /
-            korjattavia asioita.
+            Laskutuksen ennustaminen / seuranta manuaalisesti Google sheetillä
+            vaatii jatkuvaa työtä / on kömpelöä
           </Text>
         </Slide>
         <Slide bgColor="secondary" textColor="tertiary">
-          <Heading size={5} textColor="primary" caps>
-            Mitä uusia juttuja on kokeiltu?
+          <Heading size={4} textColor="primary" caps>
+            Ratkaisu - mitä tehtiin
           </Heading>
-          <Text margin="40px 0 0" bold textColor="tertiary">
-            Backend:
-            <br /> Sovelluksella 2 eri moodia, jolloin samaa docker-imagea voi
-            ajaa eri tarkoituseen.
-            <br />
+          <Text bold textColor="tertiary">
+            Laajennettiin Geniem Jiraa
           </Text>
           <Text margin="40px 0 0" bold textColor="tertiary">
-            Frontend: React Hooks API, <br />
-            MobX -tilanhallinta, Semantic UI -komponentit, <br />
-            uusi ajatusmalli testaamiseen - React Testing Library
+            Projektisivu - projektin budjetin ja avainlukujen seuranta
           </Text>
           <Text margin="40px 0 0" bold textColor="tertiary">
-            Kontena:
-            <br />
-            Zero Downtime Deployment
-            <br />
-            Volumen jakaminen palveluiden välillä (ei vielä mahdollista)
+            Projektille voi nimetä tiimin ja tekijät
+          </Text>
+          <Text margin="40px 0 0" bold textColor="tertiary">
+            Tiimien ylläpito
+          </Text>
+          <Text margin="40px 0 0" bold textColor="tertiary">
+            Laskutusennusteiden ja toteutumien toteutus projektille ennusteen
+            seuraaminen juokseva 6kk eteenpäin ja toteutuksen seuranta juokseva
+            6kk taaksepäin
+          </Text>
+          <Text margin="40px 0 0" bold textColor="tertiary">
+            Jatkuvalle palvelulla oma sivu
           </Text>
         </Slide>
-        <Slide bgColor="primary" textColor="tertiary">
-          <Image src={images.bug} width={700} />
-          <Heading size={5} textColor="tertiary" caps>
-            Valivali
+        <Slide bgColor="secondary" textColor="tertiary">
+          <Heading size={3} textColor="primary" caps>
+            Kilpailevat ratkaisut
           </Heading>
-          <Image src={images.mobile} width={700} />
-          <Heading size={5} textColor="tertiary" caps>
-            Sitä saa mitä tilaa
+          <Text bold>
+            Vaihtaa johonkin kokonaisvaltaiseen työkaluun kuten Timer / Severa /
+            ValueFrame -> ongelma kun eivät integroidu kunnolla Jiraan
+          </Text>
+          <Text margin="50px 0 0" bold>
+            Jatkaa Google sheetin käyttöä -> vaatii manuaalista työtä ja on taas
+            yksi uusi paikka - eli kukaan ei seuraa sitä
+          </Text>
+          <Text margin="50px 0 0" bold>
+            Jiralle tälläistä työkalua ei ole saatavilla vaikka kuinka etsittiin{" "}
+          </Text>
+        </Slide>
+
+        <Slide bgColor="secondary" textColor="tertiary">
+          <Heading size={3} textColor="primary" caps>
+            Hyödyt Geniemille
           </Heading>
-          <Text margin="50px 0 0" textColor="tertiary" bold>
-            Palautetta ja koodausapua otetaan vastaan #jirasaatana-kanavalla.
+          <Text bold>
+            Kankea ekselinpyöritys loppuu - työkalusta näkee simppelisti
+            projektin avainluvut ja laskutusennusteen
+          </Text>
+          <Text margin="50px 0 0" bold>
+            Homma on läpinäkyvämpää läpi firman, kun tonne on kaikilla helppo
+            pääsy
+          </Text>
+          <Text margin="50px 0 0" bold>
+            Jira on globaalisti paljon käytetty tuote -> jossain vaiheessa
+            ratkaisu voi oikeasti kiinnostaa muitakin Jiraa käyttäviä firmoja ->
+            omaa tulevaisuuden tuote potentiaalia
           </Text>
         </Slide>
 
